@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,6 +10,7 @@ import Experience from "./pages/Experience";
 import Ownership from "./pages/Ownership";
 import BookTestDrive from "./pages/BookTestDrive";
 import NotFound from "./pages/NotFound";
+import ThreeBackground from './components/ThreeBackground';
 
 const queryClient = new QueryClient();
 
@@ -19,6 +19,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <ThreeBackground />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />

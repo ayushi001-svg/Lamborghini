@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Palette, Settings, DollarSign } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import ConfigureBackground from '@/components/ConfigureBackground';
 
 const Configure = () => {
   const [searchParams] = useSearchParams();
@@ -54,6 +54,7 @@ const Configure = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900">
+      <ConfigureBackground color={colors.find(c => c.name === selectedColor)?.code || '#FFD700'} />
       <Navbar />
       
       <div className="pt-20 px-6">
