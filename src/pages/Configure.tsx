@@ -47,10 +47,10 @@ const Configure = () => {
 
   const basePrice = 206295;
   const totalPrice = basePrice + 
-    colors.find(c => c.name === selectedColor)?.price +
-    interiors.find(i => i.name === selectedInterior)?.price +
-    wheels.find(w => w.name === selectedWheels)?.price +
-    packages.find(p => p.name === selectedPackage)?.price;
+    (colors.find(c => c.name === selectedColor)?.price || 0) +
+    (interiors.find(i => i.name === selectedInterior)?.price || 0) +
+    (wheels.find(w => w.name === selectedWheels)?.price || 0) +
+    (packages.find(p => p.name === selectedPackage)?.price || 0);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900">
